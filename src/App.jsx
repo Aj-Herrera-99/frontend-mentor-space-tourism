@@ -1,18 +1,17 @@
+import { Outlet, useNavigate } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header";
+import { useEffect } from "react";
 
 function App() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate("/home", { replace: true });
+    }, [navigate]);
     return (
         <>
-            <h1 className="w-full py-4 text-6xl text-center">
-                My React Template
-            </h1>
-            <h2 className="py-4 text-3xl text-center">Packages installed:</h2>
-            <ul className="text-center">
-                <li>Tailwind css</li>
-                <li>styled-components</li>
-                <li>react-router-dom</li>
-                <li>axios</li>
-            </ul>
+            <Header />
+            <Outlet />
         </>
     );
 }
