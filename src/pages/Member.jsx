@@ -17,7 +17,7 @@ function Member() {
                     className="h-full"
                 />
             </div>
-            <section className="flex justify-center gap-4 my-8">
+            <section className="flex justify-center gap-8 my-8">
                 <NavLink
                     to={`/crew/douglashurley`}
                     className={({ isActive }) =>
