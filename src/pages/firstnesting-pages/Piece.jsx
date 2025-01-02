@@ -1,6 +1,5 @@
 import React from "react";
-import Main from "../../components/Main";
-import { NavLink, Outlet, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import data from "../../data/data.json"
 
 function Piece() {

@@ -52,7 +52,7 @@ function Header({ setIsUrlChanged }) {
                     <span>home</span>
                 </NavLink>
                 <NavLink
-                    to="/destination/moon"
+                    to="/destination"
                     onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 m-4 mb-0 pb-10 uppercase" +
@@ -62,7 +62,7 @@ function Header({ setIsUrlChanged }) {
                     <span>destination</span>
                 </NavLink>
                 <NavLink
-                    to="/crew/anoushehansari"
+                    to="/crew"
                     onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 m-4 mb-0 pb-10 uppercase" +
@@ -72,7 +72,7 @@ function Header({ setIsUrlChanged }) {
                     <span>crew</span>
                 </NavLink>
                 <NavLink
-                    to="/technology/launchvehicle"
+                    to="/technology"
                     onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 m-4 mb-0 pb-10 uppercase" +
@@ -109,7 +109,7 @@ function Header({ setIsUrlChanged }) {
                         <span>home</span>
                     </NavLink>
                     <NavLink
-                        to="/destination/moon"
+                        to="/destination"
                         onClick={goToAnotherPage}
                         className={({ isActive }) =>
                             "flex gap-3 py-4 ml-4 mr-16 uppercase" +
@@ -120,7 +120,7 @@ function Header({ setIsUrlChanged }) {
                         <span>destination</span>
                     </NavLink>
                     <NavLink
-                        to="/crew/anoushehansari"
+                        to="/crew"
                         onClick={goToAnotherPage}
                         className={({ isActive }) =>
                             "flex gap-3 py-4 ml-4 mr-16 uppercase" +
@@ -131,7 +131,7 @@ function Header({ setIsUrlChanged }) {
                         <span>crew</span>
                     </NavLink>
                     <NavLink
-                        to="/technology/launchvehicle"
+                        to="/technology"
                         onClick={goToAnotherPage}
                         className={({ isActive }) =>
                             "flex gap-3 py-4 ml-4 mr-16 uppercase" +
