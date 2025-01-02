@@ -15,6 +15,7 @@ function CelestialBody() {
                     src={`/${destination.images.png}`}
                     alt={destination.name}
                     className="h-full"
+                    loading="lazy"
                 />
             </div>
             <ul className="flex [&>*]:grow">

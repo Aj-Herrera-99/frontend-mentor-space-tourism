@@ -9,6 +9,7 @@ import Crew from "./pages/Crew.jsx";
 import Technology from "./pages/Technology.jsx";
 import CelestialBody from "./pages/CelestialBody.jsx";
 import Member from "./pages/Member.jsx";
+import Piece from "./pages/Piece.jsx";
 
 const router = createHashRouter([
     {
@@ -44,6 +45,12 @@ const router = createHashRouter([
             {
                 path: "/technology",
                 element: <Technology />,
+                children: [
+                    {
+                        path:":piece",
+                        element: <Piece/>
+                    }
+                ]
             },
         ],
     },

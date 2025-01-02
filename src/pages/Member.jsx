@@ -15,6 +15,7 @@ function Member() {
                     src={`/${memberCurr.images.png}`}
                     alt={memberCurr.name}
                     className="h-full"
+                    loading="lazy"
                 />
             </div>
             <section className="flex justify-center gap-8 my-8">

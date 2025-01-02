@@ -75,7 +75,7 @@ function Header({  setIsUrlChanged }) {
                     <span>crew</span>
                 </NavLink>
                 <NavLink
-                    to="/technology"
+                    to="/technology/launchvehicle"
                     onClick={() => {
                         setIsUrlChanged((curr) => !curr);
                         // setBgImage(

@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 function App() {
-    let bgImage = null;
+    let bgImage;
     const [isUrlChanged, setIsUrlChanged] = useState(false);
     if (window.location.href.includes("destination")) {
         console.log("destination");
