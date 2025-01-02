@@ -25,7 +25,7 @@ function Header({  setIsUrlChanged }) {
             </div>
             <aside
                 ref={asideRef}
-                className="absolute top-[8vh] right-0 w-3/5 bg-[#151724] rounded-l-lg font-light tracking-widest py-4 translate-x-[60vw] transition-all"
+                className="absolute top-[8vh] right-0 w-3/5 bg-[#151724dd] rounded-l-lg font-light tracking-widest py-4 translate-x-[60vw] transition-all z-10 backdrop-blur-md"
             >
                 <NavLink
                     to="/"
@@ -35,7 +35,7 @@ function Header({  setIsUrlChanged }) {
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
-                        "flex gap-3 py-4 ml-4 mr-20 uppercase" +
+                        "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
                     }
                 >
@@ -52,7 +52,7 @@ function Header({  setIsUrlChanged }) {
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
-                        "flex gap-3 py-4 ml-4 mr-20 uppercase" +
+                        "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
                     }
                 >
@@ -67,7 +67,7 @@ function Header({  setIsUrlChanged }) {
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
-                        "flex gap-3 py-4 ml-4 mr-20 uppercase" +
+                        "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
                     }
                 >
@@ -84,7 +84,7 @@ function Header({  setIsUrlChanged }) {
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
-                        "flex gap-3 py-4 ml-4 mr-20 uppercase" +
+                        "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
                     }
                 >
