@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
     color: white;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
     background: ${(props) => `url(${props.$bgImage})`};
     height: 100dvh;
     background-repeat: no-repeat;
@@ -17,18 +17,44 @@ const Container = styled.div`
 function App() {
     let bgImage;
     const [isUrlChanged, setIsUrlChanged] = useState(false);
+    console.log(document.body.offsetWidth);
+
     if (window.location.href.includes("destination")) {
         console.log("destination");
-        bgImage = "assets/destination/background-destination-mobile.jpg";
+        if (document.body.offsetWidth > 1280) {
+            bgImage = "assets/destination/background-destination-desktop.jpg";
+        } else if (document.body.offsetWidth > 640) {
+            bgImage = "assets/destination/background-destination-tablet.jpg";
+        } else {
+            bgImage = "assets/destination/background-destination-mobile.jpg";
+        }
     } else if (window.location.href.includes("crew")) {
         console.log("crew");
-        bgImage = "assets/crew/background-crew-mobile.jpg";
+        if (document.body.offsetWidth >= 1280) {
+            bgImage = "assets/crew/background-crew-desktop.jpg";
+        } else if (document.body.offsetWidth >= 640) {
+            bgImage = "assets/crew/background-crew-tablet.jpg";
+        } else {
+            bgImage = "assets/crew/background-crew-mobile.jpg";
+        }
     } else if (window.location.href.includes("technology")) {
         console.log("technology");
-        bgImage = "assets/technology/background-technology-mobile.jpg";
+        if (document.body.offsetWidth >= 1280) {
+            bgImage = "assets/technology/background-technology-desktop.jpg";
+        } else if (document.body.offsetWidth >= 640) {
+            bgImage = "assets/technology/background-technology-tablet.jpg";
+        } else {
+            bgImage = "assets/technology/background-technology-mobile.jpg";
+        }
     } else {
         console.log("home");
-        bgImage = "assets/home/background-home-mobile.jpg";
+        if (document.body.offsetWidth >= 1280) {
+            bgImage = "assets/home/background-home-desktop.jpg";
+        } else if (document.body.offsetWidth >= 640) {
+            bgImage = "assets/home/background-home-tablet.jpg";
+        } else {
+            bgImage = "assets/home/background-home-mobile.jpg";
+        }
     }
     return (
         <Container $bgImage={bgImage}>

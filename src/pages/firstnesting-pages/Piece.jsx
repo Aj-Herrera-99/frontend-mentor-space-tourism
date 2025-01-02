@@ -10,7 +10,7 @@ function Piece() {
     );
     return (
         <>
-            <div className="h-[27vh] w-[100vw] -translate-x-[1rem] left-0 flex justify-center mt-8 mb-4">
+            <div className="h-[27vh] sm:h-[35vh] w-[100vw] -translate-x-[1rem] left-0 flex justify-center mt-8 mb-4 sm:my-12">
                 <img
                     src={`/${pieceCurr.images.landscape}`}
                     alt={pieceCurr.name}

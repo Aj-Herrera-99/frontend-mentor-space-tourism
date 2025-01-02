@@ -18,7 +18,7 @@ function CelestialBody() {
                     loading="lazy"
                 />
             </div>
-            <ul className="flex [&>*]:grow">
+            <ul className="flex [&>*]:grow sm:justify-center sm:[&>*]:grow-0 sm:gap-12 mt-6">
                 <li>
                     <NavLink
                         to={`/destination/moon`}
@@ -64,7 +64,9 @@ function CelestialBody() {
                 <h1 className="pb-4 tracking-wide uppercase text-7xl">
                     {destination.name}
                 </h1>
-                <p className="normal-case">{destination.description}</p>
+                <p className="normal-case sm:mx-28 sm:text-lg">
+                    {destination.description}
+                </p>
             </section>
             <section className="flex flex-col gap-12">
                 <div className="flex flex-col gap-2">

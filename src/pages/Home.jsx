@@ -20,6 +20,9 @@ const ExploreBtn = styled.div`
     cursor: pointer;
     scale: .97;
     transition: all 1s ease;
+    @media (min-width: 768px) {
+        margin-top: 6rem;
+    }
     &:hover {
         animation: anim 3s infinite linear;
         scale: 1;
@@ -40,10 +43,10 @@ const ExploreBtn = styled.div`
 
 function Home() {
     return (
-        <Main classes="uppercase">
-            <p>so, you want to travel to</p>
-            <h1 className="py-5 font-light tracking-wide text-8xl">space</h1>
-            <p className="normal-case">
+        <Main classes="uppercase !pt-[10rem]">
+            <p className="sm:text-lg">so, you want to travel to</p>
+            <h1 className="py-5 font-light tracking-wide text-8xl sm:text-[10rem] sm:py-6">space</h1>
+            <p className="normal-case sm:text-lg sm:mx-28">
                 Let's face it; if you want to go to space, you might as well
                 genuinely go to outer space and not hover kind of on the edge of
                 it. Well sit back, and relax because we'll give you a truly out

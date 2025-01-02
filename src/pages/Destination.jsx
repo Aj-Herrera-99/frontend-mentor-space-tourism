@@ -6,7 +6,7 @@ function Destination() {
     return (
         <>
             <Main classes="font-light tracking-widest uppercase">
-                <div className="flex justify-center gap-3">
+                <div className="flex justify-center gap-3 sm:justify-start sm:pl-12">
                     <span className="font-bold">01</span>
                     <span>pick your destination</span>
                 </div>

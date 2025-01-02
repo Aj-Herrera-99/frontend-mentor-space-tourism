@@ -5,6 +5,9 @@ const MainWrapper = styled.div`
     padding-inline: 1rem;
     padding-top: 2rem;
     text-align: center;
+    @media (min-width: 768px) {
+        padding-top: 3rem;
+    }
 `;
 
 function Main({ classes, children }) {
