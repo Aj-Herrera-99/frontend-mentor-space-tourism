@@ -11,12 +11,21 @@ const HeaderComp = styled.header`
 
 function Header({ setIsUrlChanged }) {
     const asideRef = useRef(null);
+    const imgRef = useRef(null);
     const toggleDropdown = () => {
         asideRef.current.classList.toggle("!translate-x-0");
+        if (imgRef) {
+            if (imgRef.current.src.includes("hamburger")) {
+                imgRef.current.src = "assets/shared/icon-close.svg";
+            } else {
+                imgRef.current.src = "assets/shared/icon-hamburger.svg";
+            }
+        }
     };
     const goToAnotherPage = () => {
         setIsUrlChanged((curr) => !curr);
         asideRef.current.classList.toggle("!translate-x-0");
+        imgRef.current.src = "assets/shared/icon-hamburger.svg";
     };
     return (
         <HeaderComp>
@@ -77,6 +86,7 @@ function Header({ setIsUrlChanged }) {
             <div className="pr-4 mt-4 sm:hidden">
                 <div className="h-[6vh] flex items-center">
                     <img
+                        ref={imgRef}
                         src="assets/shared/icon-hamburger.svg"
                         alt="icon-hamburger"
                         className="transition-all scale-90 cursor-pointer h-3/5 hover:scale-100"
