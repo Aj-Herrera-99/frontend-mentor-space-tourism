@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -16,12 +16,24 @@ const Container = styled.div`
 `;
 
 function App() {
-    const [bgImage, setBgImage] = useState(
-        "assets/home/background-home-mobile.jpg"
-    );
+    let bgImage = null;
+    const [isUrlChanged, setIsUrlChanged] = useState(false);
+    if (window.location.href.includes("destination")) {
+        console.log("destination");
+        bgImage = "assets/destination/background-destination-mobile.jpg";
+    } else if (window.location.href.includes("crew")) {
+        console.log("crew");
+        bgImage = "assets/crew/background-crew-mobile.jpg";
+    } else if (window.location.href.includes("technology")) {
+        console.log("technology");
+        bgImage = "assets/technology/background-technology-mobile.jpg";
+    } else {
+        console.log("home");
+        bgImage = "assets/home/background-home-mobile.jpg";
+    }
     return (
         <Container $bgImage={bgImage}>
-            <Header setBgImage={setBgImage} />
+            <Header setIsUrlChanged={setIsUrlChanged} />
             <Outlet />
         </Container>
     );

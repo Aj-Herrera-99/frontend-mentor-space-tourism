@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
-function Header({ setBgImage }) {
+function Header({  setIsUrlChanged }) {
     const asideRef = useRef(null);
     const toggleDropdown = () => {
         asideRef.current.classList.toggle("!translate-x-0");
@@ -30,7 +30,8 @@ function Header({ setBgImage }) {
                 <NavLink
                     to="/"
                     onClick={() => {
-                        setBgImage("assets/home/background-home-mobile.jpg");
+                        setIsUrlChanged((curr) => !curr);
+                        // setBgImage("assets/home/background-home-mobile.jpg");
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
@@ -44,9 +45,10 @@ function Header({ setBgImage }) {
                 <NavLink
                     to="/destination/moon"
                     onClick={() => {
-                        setBgImage(
-                            "assets/destination/background-destination-mobile.jpg"
-                        );
+                        setIsUrlChanged((curr) => !curr);
+                        // setBgImage(
+                        //     "assets/destination/background-destination-mobile.jpg"
+                        // );
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
@@ -60,7 +62,8 @@ function Header({ setBgImage }) {
                 <NavLink
                     to="/crew/anoushehansari"
                     onClick={() => {
-                        setBgImage("assets/crew/background-crew-mobile.jpg");
+                        setIsUrlChanged((curr) => !curr);
+                        // setBgImage("assets/crew/background-crew-mobile.jpg");
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
@@ -74,9 +77,10 @@ function Header({ setBgImage }) {
                 <NavLink
                     to="/technology"
                     onClick={() => {
-                        setBgImage(
-                            "assets/technology/background-technology-mobile.jpg"
-                        );
+                        setIsUrlChanged((curr) => !curr);
+                        // setBgImage(
+                        //     "assets/technology/background-technology-mobile.jpg"
+                        // );
                         asideRef.current.classList.toggle("!translate-x-0");
                     }}
                     className={({ isActive }) =>
