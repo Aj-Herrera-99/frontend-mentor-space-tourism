@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
+import Main from "../components/Main";
 
 function Home() {
     return (
-        <main className="px-4 pt-10 text-center">
+        <Main>
             <p className="uppercase">so, you want to travel to</p>
             <h1 className="py-5 font-light tracking-wide uppercase text-8xl">
                 space
@@ -18,7 +18,7 @@ function Home() {
             <div className="flex items-center justify-between px-12 mx-auto mt-12 text-3xl font-light text-black uppercase bg-white rounded-full aspect-square w-fit">
                 explore
             </div>
-        </main>
+        </Main>
     );
 }
 
