@@ -15,7 +15,7 @@ function Piece() {
                     src={`/${pieceCurr.images.landscape}`}
                     alt={pieceCurr.name}
                     className="object-cover w-full h-full "
-                    loading="lazy"
+                    loading="eager"
                 />
             </div>
             <section className="flex justify-center gap-8 my-8">
