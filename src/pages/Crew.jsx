@@ -5,7 +5,7 @@ import Main from '../components/Main';
 function Crew() {
     const navigate = useNavigate();
     useEffect(() => {
-        navigate("crew/anoushehansari");
+        navigate("/crew/anoushehansari");
     }, [navigate]);
     return (
         <>

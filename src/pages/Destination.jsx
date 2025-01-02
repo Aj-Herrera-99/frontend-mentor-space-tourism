@@ -5,7 +5,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 function Destination() {
     const navigate = useNavigate();
     useEffect(() => {
-        navigate("destination/moon");
+        navigate("/destination/moon");
     }, [navigate]);
     return (
         <>
