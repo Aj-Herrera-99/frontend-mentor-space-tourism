@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom';
+import React from 'react'
+import { Outlet } from 'react-router-dom';
 import Main from '../components/Main';
 
 function Crew() {
-    const navigate = useNavigate();
-    useEffect(() => {
-        navigate("/crew/anoushehansari");
-    }, [navigate]);
     return (
         <>
             <Main classes="font-light tracking-widest uppercase">

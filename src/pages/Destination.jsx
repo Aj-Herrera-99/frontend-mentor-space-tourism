@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Main from "../components/Main";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function Destination() {
-    const navigate = useNavigate();
-    useEffect(() => {
-        navigate("/destination/moon");
-    }, [navigate]);
     return (
         <>
             <Main classes="font-light tracking-widest uppercase">

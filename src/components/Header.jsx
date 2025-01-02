@@ -28,7 +28,7 @@ function Header({ setBgImage }) {
                 className="absolute top-[8vh] right-0 w-3/5 bg-[#151724] rounded-l-lg font-light tracking-widest py-4 translate-x-[60vw] transition-all"
             >
                 <NavLink
-                    to="/home"
+                    to="/"
                     onClick={() => {
                         setBgImage("assets/home/background-home-mobile.jpg");
                         asideRef.current.classList.toggle("!translate-x-0");
@@ -42,7 +42,7 @@ function Header({ setBgImage }) {
                     <span>home</span>
                 </NavLink>
                 <NavLink
-                    to="/destination"
+                    to="/destination/moon"
                     onClick={() => {
                         setBgImage(
                             "assets/destination/background-destination-mobile.jpg"
@@ -58,7 +58,7 @@ function Header({ setBgImage }) {
                     <span>destination</span>
                 </NavLink>
                 <NavLink
-                    to="/crew"
+                    to="/crew/anoushehansari"
                     onClick={() => {
                         setBgImage("assets/crew/background-crew-mobile.jpg");
                         asideRef.current.classList.toggle("!translate-x-0");

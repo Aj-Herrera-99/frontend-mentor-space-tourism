@@ -1,7 +1,7 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -16,20 +16,12 @@ const Container = styled.div`
 `;
 
 function App() {
-    const navigate = useNavigate();
-    const isFirstRender = useRef(true);
     const [bgImage, setBgImage] = useState(
         "assets/home/background-home-mobile.jpg"
     );
-    useEffect(() => {
-        if (isFirstRender.current) {
-            navigate("/home");
-            isFirstRender.current = false;
-        }
-    }, [navigate]);
     return (
         <Container $bgImage={bgImage}>
-            <Header setBgImage={setBgImage}/>
+            <Header setBgImage={setBgImage} />
             <Outlet />
         </Container>
     );
