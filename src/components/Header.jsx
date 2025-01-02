@@ -6,6 +6,10 @@ function Header({  setIsUrlChanged }) {
     const toggleDropdown = () => {
         asideRef.current.classList.toggle("!translate-x-0");
     };
+    const goToAnotherPage = () => {
+        setIsUrlChanged((curr) => !curr);
+        asideRef.current.classList.toggle("!translate-x-0");
+    }
     return (
         <header className="relative flex items-center justify-between p-4">
             <div className="h-[6vh]">
@@ -29,11 +33,7 @@ function Header({  setIsUrlChanged }) {
             >
                 <NavLink
                     to="/"
-                    onClick={() => {
-                        setIsUrlChanged((curr) => !curr);
-                        // setBgImage("assets/home/background-home-mobile.jpg");
-                        asideRef.current.classList.toggle("!translate-x-0");
-                    }}
+                    onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
@@ -44,13 +44,7 @@ function Header({  setIsUrlChanged }) {
                 </NavLink>
                 <NavLink
                     to="/destination/moon"
-                    onClick={() => {
-                        setIsUrlChanged((curr) => !curr);
-                        // setBgImage(
-                        //     "assets/destination/background-destination-mobile.jpg"
-                        // );
-                        asideRef.current.classList.toggle("!translate-x-0");
-                    }}
+                    onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
@@ -61,11 +55,7 @@ function Header({  setIsUrlChanged }) {
                 </NavLink>
                 <NavLink
                     to="/crew/anoushehansari"
-                    onClick={() => {
-                        setIsUrlChanged((curr) => !curr);
-                        // setBgImage("assets/crew/background-crew-mobile.jpg");
-                        asideRef.current.classList.toggle("!translate-x-0");
-                    }}
+                    onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")
@@ -76,13 +66,7 @@ function Header({  setIsUrlChanged }) {
                 </NavLink>
                 <NavLink
                     to="/technology/launchvehicle"
-                    onClick={() => {
-                        setIsUrlChanged((curr) => !curr);
-                        // setBgImage(
-                        //     "assets/technology/background-technology-mobile.jpg"
-                        // );
-                        asideRef.current.classList.toggle("!translate-x-0");
-                    }}
+                    onClick={goToAnotherPage}
                     className={({ isActive }) =>
                         "flex gap-3 py-4 ml-4 mr-16 uppercase" +
                         (isActive ? " border-b-2" : "")

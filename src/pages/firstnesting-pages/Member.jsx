@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink, useParams } from "react-router-dom";
-import data from "../data/data.json";
+import data from "../../data/data.json";
 
 function Member() {
     const { member } = useParams();
     const memberCurr = data.crew.find(
         (el) => el.name.replaceAll(" ", "").toLowerCase() === member
     );
-    console.log(memberCurr);
     return (
         <>
             <div className="h-[35vh] flex justify-center mt-8 mb-4">

@@ -2,14 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { createBrowserRouter, createHashRouter, Navigate, Outlet, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Destination from "./pages/Destination.jsx";
 import Crew from "./pages/Crew.jsx";
 import Technology from "./pages/Technology.jsx";
-import CelestialBody from "./pages/CelestialBody.jsx";
-import Member from "./pages/Member.jsx";
-import Piece from "./pages/Piece.jsx";
+import CelestialBody from "./pages/firstnesting-pages/CelestialBody.jsx";
+import Member from "./pages/firstnesting-pages/Member.jsx";
+import Piece from "./pages/firstnesting-pages/Piece.jsx";
 
 const router = createHashRouter([
     {
@@ -38,26 +38,26 @@ const router = createHashRouter([
                 children: [
                     {
                         path: ":member",
-                        element: <Member/>
-                    }
-                ]
+                        element: <Member />,
+                    },
+                ],
             },
             {
                 path: "/technology",
                 element: <Technology />,
                 children: [
                     {
-                        path:":piece",
-                        element: <Piece/>
-                    }
-                ]
+                        path: ":piece",
+                        element: <Piece />,
+                    },
+                ],
             },
         ],
     },
 ]);
 
 createRoot(document.getElementById("root")).render(
-    // <StrictMode>
+    <StrictMode>
         <RouterProvider router={router} />
-    // </StrictMode>
+    </StrictMode>
 );

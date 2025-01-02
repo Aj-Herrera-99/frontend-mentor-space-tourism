@@ -1,14 +1,13 @@
 import React from "react";
-import Main from "../components/Main";
+import Main from "../../components/Main";
 import { NavLink, Outlet, useParams } from "react-router-dom";
-import data from "../data/data.json"
+import data from "../../data/data.json"
 
 function Piece() {
     const { piece } = useParams();
     const pieceCurr = data.technology.find(
         (el) => el.name.replaceAll(" ", "").toLowerCase() === piece
     );
-    // console.log(pieceCurr);
     return (
         <>
             <div className="h-[27vh] w-[100vw] -translate-x-[1rem] left-0 flex justify-center mt-8 mb-4">

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useParams } from "react-router-dom";
-import data from "../data/data.json";
+import data from "../../data/data.json";
 
 function CelestialBody() {
     const { celestialBody } = useParams();
