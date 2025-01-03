@@ -12,7 +12,7 @@ function CelestialBody() {
         <>
             <div className="h-[35vh] flex justify-center mt-8 mb-4">
                 <img
-                    src={`/${destination.images.png}`}
+                    src={`${destination.images.png}`}
                     alt={destination.name}
                     className="h-full"
                     loading="eager"
