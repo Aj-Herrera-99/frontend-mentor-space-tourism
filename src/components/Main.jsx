@@ -7,6 +7,7 @@ const MainWrapper = styled.div`
     text-align: center;
     @media (min-width: 768px) {
         padding-top: 3rem;
+        padding-inline: 3rem;
     }
     @media (min-width: 1280px) {
         display: flex;

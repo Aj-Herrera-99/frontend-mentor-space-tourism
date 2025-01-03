@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Main from "../components/Main";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { MyContext } from "../App";
 
 const ExploreBtn = styled.div`
     display: flex;
@@ -44,6 +45,7 @@ const ExploreBtn = styled.div`
 `;
 
 function Home() {
+    const { setIsUrlChanged } = useContext(MyContext);
     return (
         <Main classes="uppercase !pt-[10rem]">
             <section>
@@ -60,7 +62,10 @@ function Home() {
                     a truly out of this world experience!
                 </p>
             </section>
-            <Link to="/destination/mars">
+            <Link
+                to="/destination/mars"
+                onClick={() => setIsUrlChanged((curr) => !curr)}
+            >
                 <ExploreBtn>explore</ExploreBtn>
             </Link>
         </Main>

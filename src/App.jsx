@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import styled from "styled-components";
+
+export const MyContext = createContext();
 
 const Container = styled.div`
     color: white;
@@ -12,7 +14,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
-    overflow-y: auto
+    overflow-y: auto;
 `;
 
 function App() {
@@ -60,7 +62,9 @@ function App() {
     return (
         <Container $bgImage={bgImage}>
             <Header setIsUrlChanged={setIsUrlChanged} />
-            <Outlet />
+            <MyContext.Provider value={{ setIsUrlChanged }}>
+                <Outlet />
+            </MyContext.Provider>
         </Container>
     );
 }
