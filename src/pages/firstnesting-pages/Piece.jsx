@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import data from "../../data/data.json";
 
@@ -8,13 +8,15 @@ function Piece() {
     const pieceCurr = data.technology.find(
         (el) => el.name.replaceAll(" ", "").toLowerCase() === piece
     );
-    if (imgRef.current) {
-        if (document.body.offsetWidth >= 1280) {
-            imgRef.current.src = pieceCurr.images.portrait;
-        } else {
-            imgRef.current.src = pieceCurr.images.landscape;
+    useEffect(() => {
+        if (imgRef.current) {
+            if (document.body.offsetWidth >= 1280) {
+                imgRef.current.src = pieceCurr.images.portrait;
+            } else {
+                imgRef.current.src = pieceCurr.images.landscape;
+            }
         }
-    }
+    });
     return (
         <>
             <div className="xl:flex xl:!w-full xl:gap-12 xl:items-center">
