@@ -9,7 +9,7 @@ function Technology() {
     }, [navigate]);
     return (
         <Main classes="font-light tracking-widest uppercase">
-            <div className="flex justify-center gap-3 sm:justify-start sm:pl-12">
+            <div className="flex justify-center gap-3 sm:justify-start xl:!w-full">
                 <span className="font-bold">03</span>
                 <span>space launch 101</span>
             </div>

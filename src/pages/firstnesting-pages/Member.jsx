@@ -14,7 +14,7 @@ function Member() {
                     <img
                         src={`${memberCurr.images.png}`}
                         alt={memberCurr.name}
-                        className="object-bottom h-full xl:w-3/5 xl:object-contain"
+                        className="object-bottom h-full xl:w-4/5 xl:object-contain"
                         loading="eager"
                     />
                 </div>
@@ -55,7 +55,7 @@ function Member() {
                             <br />
                             <span className="block text-3xl sm:text-6xl sm:py-4">{memberCurr.name}</span>
                         </h1>
-                        <p className="normal-case sm:mx-28 sm:text-lg">
+                        <p className="normal-case sm:mx-28 sm:text-lg xl:mx-0">
                             {memberCurr.bio}
                         </p>
                     </section>

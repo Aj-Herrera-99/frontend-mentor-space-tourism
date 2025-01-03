@@ -10,7 +10,7 @@ function CelestialBody() {
 
     return (
         <>
-            <div className="h-[35vh] flex justify-center mt-8 mb-4 xl:h-[60vh]">
+            <div className="h-[35vh] flex justify-center mt-8 mb-4 xl:h-[60vh] xl:mt-12">
                 <img
                     src={`${destination.images.png}`}
                     alt={destination.name}

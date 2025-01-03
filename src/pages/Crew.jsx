@@ -10,7 +10,7 @@ function Crew() {
     return (
         <>
             <Main classes="font-light tracking-widest uppercase xl:!pb-0 xl:h-[86vh]">
-                <div className="flex justify-center gap-3 sm:justify-start sm:pl-12 xl:!w-full">
+                <div className="flex justify-center gap-3 sm:justify-start  xl:!w-full">
                     <span className="font-bold">02</span>
                     <span>meet your crew</span>
                 </div>
