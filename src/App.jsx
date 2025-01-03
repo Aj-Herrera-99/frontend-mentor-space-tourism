@@ -24,7 +24,7 @@ function App() {
 
     if (window.location.href.includes("destination")) {
         console.log("destination");
-        if (document.body.offsetWidth > 1280) {
+        if (document.body.offsetWidth > 1024) {
             bgImage = "assets/destination/background-destination-desktop.jpg";
         } else if (document.body.offsetWidth > 640) {
             bgImage = "assets/destination/background-destination-tablet.jpg";

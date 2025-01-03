@@ -44,6 +44,22 @@ const ExploreBtn = styled.div`
     }
 `;
 
+const Title = styled.h1`
+    animation: animTitle 4s infinite linear;
+
+    @keyframes animTitle {
+        0% {
+            text-shadow: 0 0 0 white;
+        }
+        50% {
+            text-shadow: 0 0 20px white;
+        }
+        100% {
+            text-shadow: 0 0 0 white;
+        }
+    }
+`;
+
 function Home() {
     const { setIsUrlChanged } = useContext(MyContext);
     return (
@@ -52,10 +68,10 @@ function Home() {
                 <p className="font-light tracking-wider sm:text-lg xl:text-2xl">
                     so, you want to travel to
                 </p>
-                <h1 className="py-5 font-light tracking-wide text-8xl sm:text-[10rem] sm:py-6">
+                <Title className="py-5 font-light tracking-wide text-8xl sm:text-[10rem] sm:py-6 xl:py-12">
                     space
-                </h1>
-                <p className="normal-case sm:text-lg sm:mx-28">
+                </Title>
+                <p className="normal-case sm:text-lg sm:mx-28 xl:mx-0 xl:w-[500px]">
                     Let's face it; if you want to go to space, you might as well
                     genuinely go to outer space and not hover kind of on the
                     edge of it. Well sit back, and relax because we'll give you
