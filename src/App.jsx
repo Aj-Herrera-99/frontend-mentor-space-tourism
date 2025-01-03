@@ -12,6 +12,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
+    overflow-y: auto
 `;
 
 function App() {

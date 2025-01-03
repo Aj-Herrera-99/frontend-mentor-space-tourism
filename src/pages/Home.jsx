@@ -46,16 +46,20 @@ const ExploreBtn = styled.div`
 function Home() {
     return (
         <Main classes="uppercase !pt-[10rem]">
-            <p className="sm:text-lg">so, you want to travel to</p>
-            <h1 className="py-5 font-light tracking-wide text-8xl sm:text-[10rem] sm:py-6">
-                space
-            </h1>
-            <p className="normal-case sm:text-lg sm:mx-28">
-                Let's face it; if you want to go to space, you might as well
-                genuinely go to outer space and not hover kind of on the edge of
-                it. Well sit back, and relax because we'll give you a truly out
-                of this world experience!
-            </p>
+            <section>
+                <p className="font-light tracking-wider sm:text-lg xl:text-2xl">
+                    so, you want to travel to
+                </p>
+                <h1 className="py-5 font-light tracking-wide text-8xl sm:text-[10rem] sm:py-6">
+                    space
+                </h1>
+                <p className="normal-case sm:text-lg sm:mx-28">
+                    Let's face it; if you want to go to space, you might as well
+                    genuinely go to outer space and not hover kind of on the
+                    edge of it. Well sit back, and relax because we'll give you
+                    a truly out of this world experience!
+                </p>
+            </section>
             <Link to="/destination/mars">
                 <ExploreBtn>explore</ExploreBtn>
             </Link>

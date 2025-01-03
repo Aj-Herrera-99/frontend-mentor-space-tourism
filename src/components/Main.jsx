@@ -8,6 +8,14 @@ const MainWrapper = styled.div`
     @media (min-width: 768px) {
         padding-top: 3rem;
     }
+    @media (min-width: 1280px) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+        & > * {
+            width: 50%;
+        }
+    }
 `;
 
 function Main({ classes, children }) {
