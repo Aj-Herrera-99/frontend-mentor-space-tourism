@@ -12,7 +12,7 @@ function Member() {
             <div className="flex flex-col sm:flex-col-reverse">
                 <div className="h-[35vh] sm:h-[47vh] flex justify-center mt-8 mb-4 sm:mb-0">
                     <img
-                        src={`/${memberCurr.images.png}`}
+                        src={`${memberCurr.images.png}`}
                         alt={memberCurr.name}
                         className="h-full"
                         loading="eager"
