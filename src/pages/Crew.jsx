@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom';
-import Main from '../components/Main';
+import React, { useContext, useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import Main from "../components/Main";
+import { MyContext } from "../App";
 
 function Crew() {
+    const { isUrlChanged } = useContext(MyContext);
     const navigate = useNavigate();
     useEffect(() => {
-        navigate("anoushehansari");
-    }, [navigate]);
+        if (window.location.href.includes("crew")) {
+            navigate("anoushehansari");
+        }
+    }, [navigate, isUrlChanged]);
     return (
         <>
             <Main classes="font-light tracking-widest uppercase xl:!pb-0 xl:h-[86vh]">
@@ -20,4 +24,4 @@ function Crew() {
     );
 }
 
-export default Crew
+export default Crew;

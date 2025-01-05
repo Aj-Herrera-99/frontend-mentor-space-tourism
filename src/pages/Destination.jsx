@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Main from "../components/Main";
 import { Outlet, useNavigate } from "react-router-dom";
+import { MyContext } from "../App";
 
 function Destination() {
+    const { isUrlChanged } = useContext(MyContext);
+
     const navigate = useNavigate();
     useEffect(() => {
-        navigate("mars");
-    }, [navigate]);
+        if (window.location.href.includes("destination")) {
+            navigate("mars");
+        }
+    }, [navigate, isUrlChanged]);
     return (
         <>
             <Main classes="font-light tracking-widest uppercase">

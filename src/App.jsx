@@ -20,7 +20,6 @@ const Container = styled.div`
 function App() {
     let bgImage;
     const [isUrlChanged, setIsUrlChanged] = useState(false);
-    console.log(document.body.offsetWidth);
 
     if (window.location.href.includes("destination")) {
         console.log("destination");
@@ -62,7 +61,7 @@ function App() {
     return (
         <Container $bgImage={bgImage}>
             <Header setIsUrlChanged={setIsUrlChanged} />
-            <MyContext.Provider value={{ setIsUrlChanged }}>
+            <MyContext.Provider value={{ setIsUrlChanged, isUrlChanged }}>
                 <Outlet />
             </MyContext.Provider>
         </Container>
